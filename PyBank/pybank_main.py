@@ -1,14 +1,11 @@
-# The average of the changes in "Profit/Losses"
-# Greatest increase in profits (date and amount) (sort)
-# Greatest decrease in losses (date and amount) (sort)
 # Final script should both print the analysis to the terminal and export a text file with the results.
 
 import os
 import csv
 
 csvpath = os.path.join("budget_data.csv")
-month_count = 0
-net_total = 0
+months = []
+net_total = []
 
 with open (csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -17,13 +14,15 @@ with open (csvpath, newline='') as csvfile:
     header = next(csvreader)
 
     for row in csvreader:
-        month_count = month_count + 1 # Count months
-        net_total = net_total + int(row[1]) # Net total
+        months.append(row[0]) # Count months
+        net_total.append(int(row[1])) # Net total
 
 #sort, index 0 and -1, dictionary
-    
-print(f"Total Months: {month_count}")
-print(f"Total: ${net_total}")
-print(f"Average Change: ${round(net_total/month_count, 2)}") # Average
-print(f"Greatest Increase in Proftis: ")
-print(f"Greatest Decrease in Proftis: ")
+#iterate through rows to zip them as a dictionary?
+#unzip then sort
+
+print(f"Total Months: {len(months)}")
+print(f"Total: ${sum(net_total)}")
+print(f"Average Change: ${round(sum(net_total)/len(months), 2)}") # Average
+#print(f"Greatest Increase in Proftis: Date: Amount")
+#print(f"Greatest Decrease in Proftis: Date: Amount")

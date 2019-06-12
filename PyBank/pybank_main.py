@@ -1,4 +1,3 @@
-import os
 import csv
 
 csvpath = ("budget_data.csv")
@@ -41,8 +40,8 @@ print(f"Average Change: ${round(avgchange, 2)}")
 print(f"Greatest Increase in Profits: {months[max_index]} (${max})")
 print(f"Greatest Decrease in Profits: {months[min_index]} (${min})")
 
-# Write txt file
-file = open("pybank_output.txt", "w" )
+# Write text file
+file = open("Bank_Analysis_Summary.txt", "w" )
 file.write("Financial Analysis\n")
 file.write("-----------------------------\n")
 file.write(f"Total Months: {len(months)}\n")

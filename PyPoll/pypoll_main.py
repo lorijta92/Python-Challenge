@@ -37,3 +37,4 @@ for candidate_name, candidate_votes in results.items(): # Candidate name, percen
 file.write("--------------------------------\n")
 file.write(f"Winner: {unique_candidates[0]}\n") # Winner by popular vote
 file.write("--------------------------------\n")
+file.close()

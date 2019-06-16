@@ -1,6 +1,7 @@
 import csv
+import os
 
-csvpath = ("budget_data.csv")
+csvpath = os.path.join("Resources", "budget_data.csv")
 months = []
 net_total = []
 change = []

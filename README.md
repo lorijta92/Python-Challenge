@@ -19,6 +19,7 @@ To obtain the greatest increase and decrease, I used the `max()` and `min()` fun
 
 I then printed my findings in Terminal as well as exported those findings to a separate text file. 
 
+
 ### Part 2: PyPoll
 #### Goal:
 Create a Python script that analyzes votes casted in a local election by calculating the following:
@@ -29,3 +30,10 @@ Create a Python script that analyzes votes casted in a local election by calcula
 - The winner of the election based on popular vote.
 
 #### Process:
+First, I read in the election data contained in a separate csv file and created an empty list, `candidates`. I appended that list with each casted vote (appearing as a candidate's name in the third column of the csv file) using a for loop. I then took the length of that list to find the total number of votes cast.
+
+Using the `Counter` module, I retrieved the names of each unique candidate and the total number of votes per candidate. As the results are stored as a dictionary (named `results`) in descending order, I used `.keys()` to separate the candidate names from the total number of votes, put the names into a list, and took the first value in that list to obtain the winner by popular vote. 
+
+In a separate for loop, I iterated through the `results` dictionary to obtain the percentage and total number of votes won for each candidate, using the variable `candidate_name` to store the keys, and the variable `candidate_votes` to store the values of each pair. 
+
+I then printed my findings in Terminal and exported those findings to a separate text file. 

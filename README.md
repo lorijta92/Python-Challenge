@@ -1,4 +1,4 @@
-# Python-Challenge
+# Python Challenge
 ### Part 1: PyBank
 #### Goal:
 Create a Python script that analyzes the financial records of a company by calculating the following:
